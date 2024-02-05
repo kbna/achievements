@@ -1,0 +1,36 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: clamp(534px, 70vw, 637px);;
+  z-index: 1;
+  padding: 10px clamp(10px, 3vw, 30px);
+  display: flex;
+  flex-direction: column-reverse;
+
+  &__img-wpr {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    color: #FFFFFF;
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}

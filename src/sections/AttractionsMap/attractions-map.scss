@@ -1,0 +1,247 @@
+@import "src/core/styles/mixins";
+
+.attractions-map-title {
+  @include mobile {
+    margin-bottom: 0;
+  }
+}
+
+.attractions-map-wrp {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  height: clamp(600px, 70vw, 746px);
+
+  @media (max-width: 900px) {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+}
+
+
+
+//.attractions-list {
+//  position: relative;
+//  z-index: 1;
+//  width: 100%;
+//  max-width: 44%;
+//  background-color: #1E1E1E;
+//  border-radius: 20px 0 0 20px;
+//  padding: clamp(10px, 4vw, 20px);
+//  display: flex;
+//  flex-direction: column;
+//  gap: clamp(10px, 4vw, 20px);
+//  overflow-y: scroll;
+//
+//  @media (max-width: 900px) {
+//    max-width: 100%;
+//    height: 541px;
+//    border-radius: clamp(15px, 3vw, 20px);
+//  }
+//}
+
+.attractions-list {
+  touch-action: pan-y;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 44%;
+  background-color: #1E1E1E;
+  border-radius: 20px 0 0 20px;
+  padding: clamp(10px, 3vw, 20px);
+  transition: translate 0.3s ease-in-out;
+  cursor: grab;
+
+  & .swiper-scrollbar {
+    background: none;
+
+    width: clamp(3px, 1vw, 5px)!important;
+    top: clamp(10px, 2vw, 20px)!important;
+    height: calc(100% - clamp(20px, 2vw, 40px))!important;
+
+    @include mobile {
+      display: none;
+    }
+  }
+  & .swiper-scrollbar-drag {
+    background-color: #D9D9D9;
+  }
+
+  @media (max-width: 900px) {
+    max-width: 100%;
+    height: 541px;
+    border-radius: clamp(15px, 3vw, 20px);
+  }
+}
+
+.attractions-map {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #BCE1CB;
+  border-radius:  0 20px 20px 0 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+  &__wrp {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    position: relative;
+    z-index: 0;
+    top: 20px;
+    height: 454px;
+    border-radius:  20px 20px  0 0;
+    flex-direction: column-reverse;
+  }
+
+  & svg {
+
+    & circle, ellipse {
+      cursor: pointer;
+    }
+  }
+
+  &__mark-wrp {
+    position: absolute;
+  }
+
+  &__mark {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    color: #19362E;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+  }
+}
+
+.attraction-slide {
+  height: fit-content;
+  margin-bottom: clamp(10px, 4vw, 20px);
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+//.attraction-card {
+//  flex-shrink: 0;
+//  position: relative;
+//  height: clamp(166px, 30vw, 222px);
+//  padding: clamp(10px, 4vw, 20px);
+//  z-index: 1;
+//  border-radius: 8px;
+//  overflow: hidden;
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-between;
+//
+//  & h5 {
+//    font-size: clamp(15px ,5vw,24px);
+//    color: #ffffff;
+//    font-weight: 400;
+//  }
+//
+//  & img {
+//    position: absolute;
+//    z-index: -1;
+//    top: 0;
+//    left: 0;
+//    width: 100%;
+//    height: 100%;
+//    object-fit: cover;
+//  }
+//
+//  & button {
+//    width: fit-content;
+//    cursor: pointer;
+//    font-size: 15px;
+//    padding: clamp(6.5px ,1vw, 10px) clamp(15px ,5vw,24px);
+//    border-radius: clamp(6px ,1vw, 11px);
+//    border: none;
+//  }
+//}
+.attraction-card {
+  flex-shrink: 0;
+  position: relative;
+
+  //padding: clamp(10px, 4vw, 20px);
+  z-index: 1;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__img-wrp {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    height: clamp(166px, 30vw, 222px);
+
+    & img {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info-wrp {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: clamp(10px, 4vw, 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #ffffff;
+    font-size: 15px;
+
+    &--active {
+      margin-top: 20px;
+      position: relative;
+      padding: 0;
+    }
+
+    & h5 {
+      font-size: clamp(15px ,5vw,24px);
+      color: #ffffff;
+      font-weight: 400;
+    }
+
+    & p {
+      margin-top: 10px;
+    }
+
+    & button {
+      width: fit-content;
+      cursor: pointer;
+      font-size: 15px;
+      padding: clamp(6.5px ,1vw, 10px) clamp(15px ,5vw,24px);
+      border-radius: clamp(6px ,1vw, 11px);
+      border: none;
+    }
+  }
+}

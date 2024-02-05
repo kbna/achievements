@@ -1,0 +1,52 @@
+.prominent-figure-card {
+  width: clamp(284px, 55vw, 434px);
+  aspect-ratio: 3/4;
+  border-radius: 16px;
+  padding: clamp(10px, 2vw, 20px) clamp(10px, 2vw, 20px);
+  user-select: none;
+
+  &__img-wrp {
+    position: relative;
+    border-radius: clamp(8px, 2vw, 16px);
+    overflow: hidden;
+    aspect-ratio: 1/1;
+
+    & img {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  & h5 {
+    margin-top: 10px;
+    font-size: clamp(15px, 2vw, 24px);
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  & p {
+    margin-top: 7px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &--bg-dark {
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+  }
+
+  &--bg-green {
+    background-color: #19362E;
+    color: #FFFFFF;
+  }
+
+  &--bg-white {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #BCE1CB;
+  }
+}

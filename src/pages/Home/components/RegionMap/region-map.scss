@@ -1,0 +1,155 @@
+@import "src/core/styles/mixins";
+
+.region-map {
+  background-color: #BCE1CB;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: clamp(20px, 4vw, 40px);
+
+  &__wrapper {
+    padding: 20px;
+  }
+}
+.choice-region-wrp {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.go-to-region-link {
+  padding: 15px 20px;
+  width: fit-content;
+  border-radius: 15px;
+  background-color: #FCFBF5;
+  text-decoration: none;
+  color: #1E1E1E;
+}
+
+.choice-region {
+  color: #1E1E1E;
+  display: flex;
+  justify-content: space-between;
+  max-width: fit-content;
+  border-radius: 15px;
+  background-color: #FCFBF5;
+
+  &__title {
+    padding: 15px 20px;
+  }
+
+  @include mobile {
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  &__divider {
+    position: relative;
+    width: 1px;
+    max-height: 50px;
+    margin: 10px 0;
+    background-color: black;
+
+    @include mobile {
+      width: calc(100% - 20px);
+      height: 1px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
+}
+
+.region-select {
+  position: relative;
+  z-index: 3;
+  color: #1E1E1E;
+  overflow: visible;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  gap: 20px;
+  padding: 15px 20px;
+  background-color: #FCFBF5;
+  border-radius: 0 15px 15px 0;
+
+  @include mobile {
+    border-radius: 0 0 15px 15px ;
+  }
+
+  &--open-items-list {
+    border-radius: 0 15px 0 0;
+  }
+
+  &__selected-item {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  &__scroll {
+    position: absolute;
+    z-index: 2;
+    background-color: red;
+    width: 4px;
+    top: 0;
+    right: 5px;
+  }
+
+  &__scroll-tumb {
+    position: absolute;
+    top: 0;
+    width: 4px;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+  }
+
+  &__items-list {
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    transform-origin: bottom;
+    left: 0;
+    top: 100%;
+    max-height: 260px;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: #FCFBF5;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    transition: background-color 0.2s ease-in-out;
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
+    & li {
+      padding: 10px;
+      border-radius: 10px;
+
+      @include hover {
+        background-color: #BCE1CB;
+      }
+    }
+  }
+}
+
+//#regions-map-svg {
+//  & path {
+//    transition: fill 0.3s ease-in-out;
+//  }
+//}
+
+//#region-test-1, #region-test-2, #region-test-3, #region-test-4, #region-test-5, #region-test-6, #region-test-7, #region-test-8, #region-test-9, #region-test-10, #region-test-11, #region-test-12, #region-test-13, #region-test-14, #region-test-15, #region-test-16, #region-test-17, #region-test-18, #region-test-19, #region-test-20, #region-test-21, #region-test-22, #region-test-23, #region-test-24, #region-test-25, #region-test-26, #region-test-27, #region-test-28, #region-test-29, #region-test-30, #region-test-31, #region-test-32, #region-test-33, #region-test-34, #region-test-35, #region-test-36, #region-test-37, #region-test-38, #region-test-39, #region-test-40, #region-test-41, #region-test-42, #region-test-43, #region-test-44, #region-test-45, #region-test-46, #region-test-47, #region-test-48, #region-test-49, #region-test-50, #region-test-51, #region-test-52, #region-test-53, #region-test-54, #region-test-55, #region-test-56, #region-test-57, #region-test-58, #region-test-59, #region-test-60, #region-test-61, #region-test-62, #region-test-63, #region-test-64, #region-test-65, #region-test-66, #region-test-67, #region-test-68, #region-test-69, #region-test-70, #region-test-71, #region-test-72, #region-test-73, #region-test-74, #region-test-75, #region-test-76, #region-test-77, #region-test-78, #region-test-79, #region-test-80 {
+//  &:hover {
+//    fill: #19362E;
+//  }
+//}

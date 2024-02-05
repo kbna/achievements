@@ -1,0 +1,47 @@
+.dish-card {
+  max-width: 263px;
+  width: 100%;
+  border-radius: 15px;
+  padding: 20px;
+  user-select: none;
+
+  &__img-wrp {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+
+    & img {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+  }
+
+  & h5 {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  & p {
+    margin-top: 7px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &--bg-green {
+    background-color: #19362E;
+    color: #FFFFFF;
+  }
+
+  &--bg-white {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #BCE1CB;
+  }
+}

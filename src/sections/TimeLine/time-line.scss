@@ -1,0 +1,35 @@
+@import "src/core/styles/mixins";
+
+.time-line-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include mobile {
+    gap: 40px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  &__button {
+    min-width: clamp(150px, 20vw, 187px);
+    border-radius: 11px;
+    border: none;
+    cursor: pointer;
+    background-color: #BCE1CB;
+    color: #19362E;
+    padding: 10px 20px;
+    font-size: clamp(15px, 2vw, 16px);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    &--active {
+      background-color: #19362E;
+      color: #ffffff;
+    }
+  }
+}

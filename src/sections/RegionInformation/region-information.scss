@@ -1,0 +1,30 @@
+@import "src/core/styles/variables";
+
+.region-facts-list {
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+
+  &__item {
+    width: 283px;
+    height: 165px;
+    border-radius: 16px;
+    background-color: #1E1E1E;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 14.5px;
+    padding: 20px;
+    margin-right: 10px;
+    cursor: grab;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    & span {
+      font-size: 36px;
+    }
+  }
+}

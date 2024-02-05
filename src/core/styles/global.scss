@@ -1,0 +1,17 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "../fonts/Inter/stylesheet";
+
+* {
+  font-family: Inter;
+  line-height: normal;
+}
+
+body {
+  background-color: #F5F5F5;
+}
+
+.section-margin-top {
+  margin-top: clamp(80px, 15vw, 150px);
+}

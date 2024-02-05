@@ -1,0 +1,23 @@
+@import "src/core/styles/variables";
+
+.container {
+  margin: 0 auto;
+  //max-width: 1160px;
+  width: 100%;
+
+  &--padding-top {
+    padding-top: $container-padding;
+  }
+
+  &--padding-left {
+    padding-left: $container-padding;
+  }
+
+  &--padding-right {
+    padding-right: $container-padding;
+  }
+
+  &--padding-bottom {
+    padding-bottom: $container-padding;
+  }
+}

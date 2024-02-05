@@ -1,0 +1,16 @@
+@import "src/core/styles/variables";
+
+.prominent-figure-cards-list {
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+
+  &__item {
+    width: fit-content!important;
+    margin-right: 10px;
+    cursor: grab;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

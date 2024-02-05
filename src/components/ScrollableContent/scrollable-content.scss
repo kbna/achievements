@@ -1,0 +1,18 @@
+.scrollable-content {
+  position: relative;
+
+  &__item {
+    position: sticky;
+    overflow: hidden;
+    top: 5vh;
+  }
+
+  &__wrp {
+    overflow: hidden;
+    position: relative;
+    margin-top: 30px;
+    width: fit-content;
+    display: flex;
+    padding-right: 40px;
+  }
+}
